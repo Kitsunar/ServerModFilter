@@ -1,0 +1,29 @@
+name: server_mod_filter
+description: Analyse les mods Minecraft pour créer facilement un dossier mods serveur.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  archive: ^3.6.1          # Lecture des fichiers .jar/.zip
+  file_picker: ^8.0.0+1    # Sélection de fichiers/dossiers
+  path: ^1.9.0             # Manipulation de chemins
+  toml: ^0.16.0            # Parser les mods.toml (Forge/NeoForge)
+  provider: ^6.1.2         # State management
+  google_fonts: ^6.2.1     # Polices (fallback)
+  url_launcher: ^6.2.5     # Ouvrir des liens externes
+  window_manager: ^0.4.0   # Contrôle de la fenêtre Windows
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
