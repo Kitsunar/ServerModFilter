@@ -9,7 +9,7 @@ ServerModFilter analyse les fichiers `.jar` de tes mods pour déterminer automat
 ## ✨ Fonctionnalités
 
 ### Mode Rapide — Analyse seule
-- Importe un dossier `mods/` ou un fichier `.zip`
+- Importe un dossier `.zip`
 - Analyse automatique de chaque `.jar`
 - Affichage par catégorie : **Client**, **Serveur**, **Client & Serveur**, **Inconnu**
 - Niveau de confiance pour chaque détection
@@ -17,8 +17,8 @@ ServerModFilter analyse les fichiers `.jar` de tes mods pour déterminer automat
 
 ### Mode Complet — Analyse + Export
 - Tout ce que fait le mode rapide
-- Crée automatiquement un dossier `mods/` serveur (sans les mods client-only)
-- Export en dossier ou en `.zip`
+- Crée automatiquement un dossier `server_mods` (sans les mods client-only)
+- Export en `.zip`
 - Génère un rapport d'analyse détaillé
 
 ---
@@ -38,30 +38,22 @@ Quand les métadonnées sont incomplètes, l'app utilise :
 
 ---
 
-## 🚀 Installation & Lancement
 
 ### Prérequis
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) >= 3.2.0
-- [Visual Studio 2022](https://visualstudio.microsoft.com/) avec le workload "Desktop development with C++"
+
 - Windows 10/11
 
 ### Étapes
 
-```bash
-# 1. Clone ou copie le projet
-cd server_mod_filter
+Rendez-vous dans l'onglet Release de GitHub et télécharger le fichier.zip pour Windows.
 
-# 2. Récupère les dépendances
-flutter pub get
+Une fois télécharger, dézippé le fichier.
 
-# 3. Lance l'app en mode debug
-flutter run -d windows
+Après quoi, il ne vous restera plus qu'a exécuter le .exe dans le fichier.
 
-# 4. Pour un build release
-flutter build windows --release
-```
+# Important
 
-L'exécutable sera dans `build/windows/x64/runner/Release/`.
+Ne surtout pas déplacer le .exe du fichier.
 
 ---
 
@@ -101,9 +93,8 @@ server_mod_filter/
 
 ## 🎨 Design
 
-L'interface utilise un thème sombre inspiré de Minecraft :
+L'interface utilise un thème sombre :
 - Palette : obsidienne, deepslate, émeraude, diamant, redstone, or
-- Bordures pixelisées avec effet 3D sur les boutons
 - Couleurs par catégorie : 🔵 Client (diamant) / 🟡 Serveur (or) / 🟢 Les deux (émeraude) / 🔴 Inconnu (redstone)
 
 ---
